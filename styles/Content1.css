@@ -1,0 +1,344 @@
+        /* 内容一 */
+        .home-part1 {
+            /* padding: 0.7rem 0 0.9rem; */
+            width: 1000.4px;
+            height: 464.1px;
+            display: flex;
+            /* padding: 0.6rem 0.6rem 1.2rem; */
+            margin: 0.8rem auto;
+            /* box-shadow: 0 2px 8px -2px rgb(189, 218, 240),
+                0 4px 16px rgb(178, 218, 233); */
+        }
+
+        .key-news {
+            width: 323.3px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .key-news .title {
+            width: 100%;
+            height: 25.5px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .key-news .title span {
+            font-size: 0.32rem;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .key-news .title a {
+            height: 25.5px;
+            font-size: 0.24rem;
+            line-height: 0.3rem;
+            padding-bottom: 0.08rem;
+            color: #666;
+            font-weight: 400;
+            text-decoration: none;
+            margin: 0.085rem;
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .key-news a:hover {
+            color: #007aff;
+        }
+
+        .key-news .content {
+            background-color: #edf2f9;
+            width: 100%;
+            height: 100%;
+            margin-top: 0.1rem;
+            padding: 0;
+            display: flex;
+        }
+
+        .key-news .content ul {
+            padding: 0.3rem 0.1rem;
+            margin: 0;
+            border-left: 3px solid #004098;
+        }
+
+        .key-news .content li {
+            width: 308.11px;
+            display: inline-block;
+            height: calc(100%/6);
+            padding: 0 0.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.15rem;
+            border-bottom: 0.5px solid #adbfc6;
+        }
+
+        .key-news .content li .text {
+            width: 100%;
+            height: 100%;
+            padding: 0.2rem;
+        }
+
+        .key-news .content h3 {
+            font-size: 0.4rem;
+            line-height: 0.31rem;
+            color: #004098;
+            font-family: DINPro;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .key-news .content h4 {
+            margin: 0;
+            color: #004098;
+            font-family: DINPro;
+            font-size: 0.22rem;
+            font-weight: 500;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .key-news .content a {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: #333;
+            font-weight: 400;
+            text-decoration: none;
+            font-size: 0.23rem;
+            line-height: 0.3rem;
+        }
+
+        .key-news .content a:hover {
+            color: #007aff;
+        }
+
+        .currentnews {
+            width: 353.3px;
+            height: 100%;
+            padding: 0.2rem;
+        }
+
+        .currentnews .picture {
+            height: calc(100%/3)*2;
+            width: 100%;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        .currentnews .picture img {
+            display: block;
+            width: 100%;
+            /* 确保图片适应父容器宽度 */
+            height: auto;
+            transition: transform 0.3s ease;
+
+        }
+
+        .currentnews .picture img:hover {
+            transform: scale(1.1);
+            /* 鼠标悬停时放大到 1.1 倍 */
+        }
+
+        .currentnews .content {
+            width: 100%;
+            height: 85.39px;
+        }
+
+        .currentnews .content h3 {
+            margin: 0.12rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #333;
+            text-align: center;
+            font-size: 0.3rem;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .currentnews .content h3:hover {
+            color: #007aff;
+        }
+
+        .currentnews .content p {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            color: #666;
+            font-size: 0.2rem;
+            font-weight: 400;
+            line-height: 0.35rem;
+        }
+
+        .currentnews .content .notice {
+            width: 333.3px;
+            height: 100%;
+        }
+
+        .currentnews .sliders {
+            width: 100%;
+            height: 70.34px;
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .currentnews .sliders button {
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            color: #666;
+        }
+
+        .currentnews .sliders button:hover {
+            color: #007aff;
+            cursor: pointer;
+        }
+
+        .currentnews .sliders ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.1rem;
+        }
+
+        .currentnews .sliders li {
+            width: 8px;
+            height: 8px;
+            margin: 4px;
+            border-radius: 50%;
+            /* background: #fff; */
+            /* opacity: 0.4; */
+            cursor: pointer;
+            background: #7d8d9f;
+            opacity: 0.6;
+
+        }
+
+        .currentnews .sliders .active {
+            width: 12px;
+            height: 12px;
+            border: 1.5px solid #05306c;
+            background-color: #fff;
+        }
+
+        .notice {
+            width: 323.3px;
+            height: 100%;
+        }
+
+        .notice .title {
+            width: 100%;
+            height: 25.5px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .notice .title span {
+            font-size: 0.32rem;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .notice .title a {
+            height: 25.5px;
+            font-size: 0.24rem;
+            line-height: 0.3rem;
+            padding-bottom: 0.08rem;
+            color: #666;
+            font-weight: 400;
+            text-decoration: none;
+            margin: 0.085rem;
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .notice p:hover {
+            color: #007aff;
+        }
+
+        .notice .content {
+            padding: 0.3rem 0.1rem;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-top: 0.1rem;
+            gap: 0.2rem;
+            background-color: #edf2f9;
+            width: 100%;
+            height: 92.8%;
+            border-right: 3px solid #004098;
+        }
+
+        .notice .content .box {
+            width: 308.11px;
+            display: inline-block;
+            height: calc(100%/5);
+            background-color: #fff;
+            padding: 0 0.1rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 0.15rem;
+            overflow: hidden;
+            /* 隐藏溢出内容 */
+            text-overflow: ellipsis;
+            /* 溢出部分显示省略号 */
+        }
+
+        .notice .content .text {
+            width: 100%;
+            height: 100%;
+            padding: 0.2rem;
+            overflow: hidden;
+        }
+
+        .notice .content h3 {
+            font-size: 0.4rem;
+            line-height: 0.31rem;
+            color: #004098;
+            font-family: DINPro;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .notice .content h4 {
+            margin: 0;
+            color: #004098;
+            font-family: DINPro;
+            font-size: 0.22rem;
+            font-weight: 500;
+            line-height: normal;
+            white-space: nowrap;
+        }
+
+        .notice .content a {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            color: #333;
+            font-weight: 400;
+            text-decoration: none;
+            font-size: 0.23rem;
+            line-height: 0.3rem;
+        }
+
+        .notice .content a:hover {
+            color: #007aff;
+        }

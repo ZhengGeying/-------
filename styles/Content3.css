@@ -1,0 +1,213 @@
+        /* 内容三 */
+        .home-part4 {
+            width: 1000.4px;
+            height: 333.56px;
+            padding-top: 0.7rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .home-part4 .school-video {
+            width: 475.8px;
+            height: 100%;
+        }
+
+        .home-part4 .school-media {
+            width: 475.8px;
+            height: 100%;
+        }
+
+        .home-part4 span {
+            font-size: 0.32rem;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .home-part4 .title {
+            width: 100%;
+            height: 25.5px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .home-part4 .title .more {
+            width: 58.66px;
+            height: 25.5px;
+            position: absolute;
+            right: 0;
+            border-bottom: #f2a900;
+        }
+
+        .title .more a {
+            font-size: 0.24rem;
+            line-height: 0.3rem;
+            padding-bottom: 0.08rem;
+            color: #666;
+            font-weight: 400;
+            text-decoration: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .title .more a:hover {
+            color: #007aff;
+        }
+
+        .title .more a::after {
+            content: "————";
+            color: #f2a900;
+            margin: 0 -4px;
+        }
+
+        .video-box {
+            width: 100%;
+            height: 100%;
+            margin-top: 0.1rem;
+            position: relative;
+        }
+
+        .video-box img {
+            width: 100%;
+        }
+
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(4, 4, 135, 0.8);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .play-btn::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 16px solid rgba(255, 255, 255, 0.95);
+        }
+
+        .video a {
+            bottom: 0.45rem;
+            font-size: 0.26rem;
+            position: absolute;
+            text-decoration: none;
+            left: 36%;
+            width: 100%;
+            padding: 0 0.6rem;
+            color: #fff;
+            opacity: 0.8;
+            z-index: 10;
+        }
+
+        .video a:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .watch-video {
+            overflow: hidden;
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .watch-video .toggle {
+            position: absolute;
+            top: 0.34rem;
+            right: 0.18rem;
+            width: 0.4rem;
+            height: 0.4rem;
+            background-image: url('../images/h.svg');
+            border-radius: 2px;
+            background-color: #8da8d0;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        #myVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* 核心：保持比例完整显示 */
+        }
+
+        .home-part4 .school-media .content {
+            width: 100%;
+            height: 100%;
+            margin-top: 0.1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .school-media .content .media-content {
+            width: 100%;
+            height: 93.34px;
+            gap: 0.26rem;
+            display: flex;
+            padding: 0.2rem 0;
+            border-bottom: 0.01rem solid #e3e9f0;
+        }
+
+        .media-content .med-img {
+            width: 2rem;
+            height: 1.2rem;
+            overflow: hidden;
+        }
+
+        .media-content .med-img img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .media-content .med-img img:hover {
+            transform: scale(1.1);
+        }
+
+        .media-content .med-news {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.1rem;
+        }
+
+        .med-news a {
+            width: 342px;
+            text-decoration: none;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 0.26rem;
+            line-height: 0.36rem;
+            color: #333;
+
+        }
+
+        .med-news a:hover {
+            color: #007aff;
+        }
+
+        .med-news h4 {
+            font-size: 0.22rem;
+            line-height: 0.28rem;
+            color: #004098;
+            margin: 0;
+            font-weight: 400;
+        }

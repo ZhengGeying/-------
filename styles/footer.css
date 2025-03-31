@@ -1,0 +1,148 @@
+       /* 底部内容 */
+       .footer {
+           width: 100%;
+           height: 512.16px;
+           margin-top: 1rem;
+           padding: 0.6rem 0 0.3rem;
+           background-color: #004098;
+       }
+
+       .footer .wrapper- {
+           width: 1000.4px;
+           height: 384.45px;
+           margin: 0 auto;
+           margin-bottom: 0.5rem;
+           gap: 0.6rem;
+           display: flex;
+       }
+
+       .contact {
+           width: 286.49px;
+           height: 378.17px;
+           border-right: 0.01rem solid rgba(255, 255, 255, 0.1);
+           padding-right: 0.5rem;
+       }
+
+       .contact .logo {
+           width: 2.9rem;
+           height: 0.68rem;
+           margin-bottom: 0.2rem;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+
+       .contact .info {
+           width: 254.99px;
+           height: 190.75px;
+           gap: 0.24rem;
+           /* display: flex;
+            padding: 0;
+            margin: 0; */
+           flex-direction: column;
+       }
+
+       .info h2 {
+           margin-top: 0.02rem;
+           font-size: 0.26rem;
+           color: #fff;
+           font-family: OPPOSans;
+           font-style: normal;
+           font-weight: 400;
+           line-height: normal;
+       }
+
+       .info p {
+           font-size: 0.22rem;
+           color: #fff;
+           font-family: OPPOSans;
+           font-style: normal;
+           font-weight: 400;
+           line-height: normal;
+       }
+
+       .call-icon {
+           border-radius: 50%;
+           background-color: rgba(255, 255, 255, 0.15);
+           background-size: 50%;
+           width: 34.16px;
+           height: 34.16px;
+           margin: auto 0;
+       }
+
+       .call-number {
+           width: 123.15px;
+           height: 42.32px;
+           flex-direction: column;
+           gap: 0;
+           margin-left: 0.1rem;
+       }
+
+       .footer .bottom {
+           width: 1000.4px;
+           height: 31.6px;
+           margin: 0 auto;
+           padding-top: 0.24rem;
+           border-top: 0.01rem solid rgba(255, 255, 255, 0.1);
+           display: flex;
+           justify-content: space-between;
+           font-size: 0.18rem;
+           color: rgba(255, 255, 255, 0.7);
+       }
+
+       .department {
+           width: 497.21px;
+           height: 381.17px;
+           border-right: 0.01rem solid rgba(255, 255, 255, 0.1);
+           padding-right: 0.5rem;
+       }
+
+       .department .content {
+           gap: 37.56px;
+           display: flex;
+           font-size: 0.22rem;
+           line-height: 0.36rem;
+           color: rgba(255, 255, 255, 0.8);
+           font-weight: 400;
+       }
+
+       .wrapper- a {
+           font-size: 0.22rem;
+           line-height: 0.36rem;
+           color: rgba(255, 255, 255, 0.8);
+           font-weight: 400;
+           text-decoration: none;
+           display: block;
+       }
+
+       .wrapper- a:hover {
+           color: rgba(255, 255, 255, 1);
+       }
+
+       .bottom a {
+           color: rgba(255, 255, 255, 0.7);
+           /* margin: 0 0.2rem; */
+       }
+
+       .bottom .copyright {
+           width: 480px;
+           height: 100%;
+       }
+
+       .copyright a {
+           margin: 0 0.2rem;
+       }
+
+       .copyright p {
+           display: inline;
+       }
+
+       .technical-support {
+           width: 108.45px;
+           height: 100%;
+
+       }
+
+       .technical-support p {
+           display: inline;
+       }

@@ -1,0 +1,27 @@
+<style>
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        /* 关键属性：允许换行 */
+        gap: 10px;
+        width: 400px;
+        /* 固定容器宽度，模拟换行场景 */
+        padding: 10px;
+        background: #f0f0f0;
+    }
+
+    .flex-item {
+        flex-basis: 150px;
+        /* 项目基准宽度，容器宽度不足时触发换行 */
+        padding: 10px;
+        background: #e0e0e0;
+    }
+</style>
+
+<ul class="flex-container">
+    <li class="flex-item">项目1</li>
+    <li class="flex-item">项目2（较长内容）</li>
+    <li class="flex-item">项目3</li>
+    <li class="flex-item">项目4</li>
+    <li class="flex-item">项目5</li>
+</ul>
