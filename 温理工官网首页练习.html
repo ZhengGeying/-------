@@ -358,7 +358,65 @@
                         <p>温州理工学院是一所高水平应用型公办普通本科高校，坐落于素有“中国数学家的摇篮“、“中国最具幸福感城市”等美誉的浙江省温州市。</p>
                         <a href="#">查看更多 <img src="./images/o.svg"> </a>
                     </div>
-                    <div class="slid"></div>
+                    <div class="campus-introduction">
+                        <div class="slider-info">
+                            <div class="campus-slider-item">
+                                <div class="slider-img">
+                                    <img src="./images/aa.png">
+                                    <h2>招生信息</h2>
+                                </div>
+                                <div class="slider-text">
+                                    <p>学校面向全国16个省市招生，现有全日制普通本科在校10697人</p>
+                                    <a href="#">了解更多 <img src="./images/o.svg"> </a>
+                                </div>
+                            </div>
+                            <div class="campus-slider-item">
+                                <div class="slider-img">
+                                    <img src="./images/bb.png">
+                                    <h2>专升本</h2>
+                                </div>
+                                <div class="slider-text">
+                                    <p>学校每年选拔优秀高职高专毕业生进入汉语言文学等10余个本科专业学习</p>
+                                    <a href="#">了解更多 <img src="./images/o.svg"> </a>
+                                </div>
+                            </div>
+                            <div class="campus-slider-item">
+                                <div class="slider-img">
+                                    <img src="./images/cc.png">
+                                    <h2>院系专业</h2>
+                                </div>
+                                <div class="slider-text">
+                                    <p>学校下设12个教学机构，现有本科专业35个（其中在招专业28个）</p>
+                                    <a href="#">了解更多 <img src="./images/o.svg"> </a>
+                                </div>
+                            </div>
+                            <div class="campus-slider-item">
+                                <div class="slider-img">
+                                    <img src="./images/dd.png">
+                                    <h2>培养模式</h2>
+                                </div>
+                                <div class="slider-text">
+                                    <p>经过多年的改革与实践，形成了具有鲜明特色的多元化人才培养模式。</p>
+                                    <a href="#">了解更多 <img src="./images/o.svg"> </a>
+                                </div>
+                            </div>
+                            <div class="campus-slider-item">
+                                <div class="slider-img">
+                                    <img src="./images/ee.png">
+                                    <h2>校园生活</h2>
+                                </div>
+                                <div class="slider-text">
+                                    <p>学校占地面积901.8亩，基础建设已投资24.2亿元，校舍面积40.9万平方米</p>
+                                    <a href="#">了解更多 <img src="./images/o.svg"> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-button prev">&lt;</button>
+                            <button class="slider-button next">&gt;</button>
+                        </div>
+                        <div class="slider-pagination"></div>
+                    </div>
                 </div>
             </div>
             <div id="selection2" class="content-box ">
@@ -459,7 +517,42 @@
                             </div>
                         </div>
                         <div class="ws-content">
-
+                            <a href="#">
+                                <div>
+                                    <img src="./images/(1).svg">
+                                </div>
+                                <h3>校务大厅</h3>
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="/images/(2).svg">
+                                </div>
+                                <h3>师生意见快递站</h3>
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="/images/(3).svg">
+                                </div>
+                                <h3>信息公开</h3>
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="/images/(4).svg">
+                                </div>
+                                <h3>校历表</h3>
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="/images/(5).svg">
+                                </div>
+                                <h3>邮件服务</h3>
+                            </a>
+                            <a href="#">
+                                <div>
+                                    <img src="/images/(6).svg">
+                                </div>
+                                <h3>网络服务</h3>
+                            </a>
                         </div>
                     </div>
                     <div class="research-orientation">
@@ -941,6 +1034,82 @@
 
         });
 
+        //  selection1
+        // 获取元素
+        {
+            const sliderWrapper = document.querySelector('.slider-info');
+            const sliderItems = document.querySelectorAll('.campus-slider-item');
+            const prevButton = document.querySelector('.slider-button.prev');
+            const nextButton = document.querySelector('.slider-button.next');
+            const itemsPerView = 3.5; // 每屏显示 3.5 个滑块
+            const totalItems = sliderItems.length;
+
+            // 克隆滑块
+            const firstClones = [];
+            const lastClones = [];
+            for (let i = 0; i < itemsPerView; i++) {
+                firstClones.push(sliderItems[i].cloneNode(true));
+                lastClones.push(sliderItems[totalItems - 1 - i].cloneNode(true));
+            }
+            firstClones.forEach(clone => sliderWrapper.appendChild(clone));
+            lastClones.reverse().forEach(clone => sliderWrapper.insertBefore(clone, sliderWrapper.firstChild));
+
+            // 初始化位置
+            let currentIndex = itemsPerView; // 初始位置为第一个真实滑块
+            sliderWrapper.style.transform = `translateX(-${(currentIndex * 100) / itemsPerView}%)`;
+
+            // 更新滑块位置
+            function updateSlider(animate = true) {
+                const offset = -(currentIndex * 100) / itemsPerView;
+                sliderWrapper.style.transition = animate ? 'transform 0.5s ease-in-out' : 'none';
+                sliderWrapper.style.transform = `translateX(${offset}%)`;
+            }
+
+            // 下一页
+            nextButton.addEventListener('click', () => {
+                currentIndex++;
+                updateSlider();
+                if (currentIndex === totalItems + itemsPerView) {
+                    setTimeout(() => {
+                        currentIndex = itemsPerView; // 跳回第一个真实滑块
+                        updateSlider(false);
+                    }, 500); // 等待动画完成后跳转
+                }
+            });
+
+            // 上一页
+            prevButton.addEventListener('click', () => {
+                currentIndex--;
+                updateSlider();
+                if (currentIndex === 0) {
+                    setTimeout(() => {
+                        currentIndex = totalItems; // 跳回最后一个真实滑块
+                        updateSlider(false);
+                    }, 500); // 等待动画完成后跳转
+                }
+            });
+
+            // 自动播放
+            let autoplay = setInterval(() => {
+                nextButton.click();
+            }, 3000);
+
+            // 鼠标悬停时暂停自动播放
+            document.querySelector('.slider-container').addEventListener('mouseenter', () => {
+                clearInterval(autoplay);
+            });
+
+            // 鼠标离开时恢复自动播放
+            document.querySelector('.slider-container').addEventListener('mouseleave', () => {
+                autoplay = setInterval(() => {
+                    nextButton.click();
+                }, 5000);
+            });
+
+            // 初始化位置
+            updateSlider(false);
+        }
+
 
         // selection2
         document.querySelectorAll('.identity .content').forEach(box => {
@@ -992,6 +1161,35 @@
                 indicator.addEventListener('click', () => {
                     currentIndex = index;
                     updateIndicators(currentIndex);
+                });
+            });
+            //智慧校园鼠标经过图片的切换
+            const images = [
+                { url: './images/(9).svg' },
+                { url: './images/(10).svg' },
+                { url: './images/(11).svg' },
+                { url: './images/(12).svg' },
+                { url: './images/(13).svg' },
+                { url: './images/(14).svg' },
+            ]
+            const switchImage = document.querySelectorAll('.ws-content a')
+            console.log(switchImage)
+            switchImage.forEach((aTag, index) => {
+                // 获取 a 标签内的 img 元素
+                const img = aTag.querySelector('img');
+                if (!img) return; // 如果 a 标签内没有 img，跳过
+
+                // 保存原始图片地址
+                const originalSrc = img.src;
+
+                // 鼠标移入时更换图片
+                aTag.addEventListener('mouseenter', () => {
+                    img.src = images[index].url;
+                });
+
+                // 鼠标移出时恢复原始图片
+                aTag.addEventListener('mouseleave', () => {
+                    img.src = originalSrc;
                 });
             });
         }
